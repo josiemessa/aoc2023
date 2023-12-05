@@ -55,6 +55,7 @@ func main() {
 		//             source  , source end              --> destination
 		current[[2]uint64{entry[1], (entry[1] + entry[2] - 1)}] = entry[0]
 	}
+	maps = append(maps, current)
 
 	fmt.Println(maps)
 
@@ -71,8 +72,9 @@ func main() {
 			// if we don't find val, it just stays the same
 			fmt.Println(val)
 		}
+
+		fmt.Println(val)
 		if val < minLoc {
-			fmt.Println(val)
 			minLoc = val
 		}
 		fmt.Println()
